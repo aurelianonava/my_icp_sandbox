@@ -3,3 +3,6 @@ actor {
     return "Hello, " # name # "!";
   };
 };
+
+
+//// some comment here...also in main.mo
