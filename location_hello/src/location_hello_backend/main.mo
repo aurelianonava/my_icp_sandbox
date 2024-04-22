@@ -6,6 +6,3 @@ actor {
 
 
 };
-
-
-//// some comment here...also in main.mo
