@@ -1,5 +1,46 @@
 # location_hello
 
+Deployed location_hello canister with:
+
+`dfx deploy location_hello_backend
+`
+
+No Candid interface call will be made here. Instead we'll call the canister directly from the CMD. If we were to use the Candid interface, we would use this URL generated with we ran dfx deploy above, which is this URL:
+
+`
+URLs:
+  Backend canister via Candid interface:
+    location_hello_backend: http://127.0.0.1:4943/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
+    `
+
+Calling canister from CMD:
+
+`
+dfx canister call location_hello_backend location "San Francisco"
+`
+
+Output:
+
+`
+Decryption complete.
+("Hello, San Francisco!")
+`
+
+If passing a single word containing No spaces, no quotation marks are required:
+
+`
+dfx canister call location_hello_backend location Paris
+`
+
+Output:
+
+`
+Decryption complete.
+("Hello, Paris!")
+`
+
+
+
 Welcome to your new location_hello project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
